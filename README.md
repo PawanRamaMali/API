@@ -6,6 +6,11 @@ API is Application Programming Interface
 * It helps in connecting various software components.
 * An API makes it easier for developers to use certain technologies in building applications by using predefined operations. 
 
+# Purpose of API
+
+* One purpose of APIs is to hide the internal details of how a system works, exposing only those parts a programmer will find useful and keeping them consistent even if the internal details later change. 
+* An API may be custom-built for a particular pair of systems, or it may be a shared standard allowing interoperability among many systems.
+
 # REST Framework 
 
 * It describes an architecture which stands for REpresentational State Transfer
