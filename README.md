@@ -25,3 +25,20 @@ Common used HTTP methods :
 * It is a set of web addresses that respond with pure information, not a formatted web page.
 * An API returns a JSON, which is a common format. {},[]
 
+# Install REST API
+
+* Requirements are python and pip 
+* On terminal type 
+```
+pip install djangorestframework
+```
+
+# Add to Django Project
+
+* Add `rest_framework` to your INSTALLED_APPS setting.
+```
+INSTALLED_APPs = (
+...
+'rest_framework',
+)
+```
