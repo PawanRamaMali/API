@@ -11,6 +11,10 @@ API is Application Programming Interface
 * One purpose of APIs is to hide the internal details of how a system works, exposing only those parts a programmer will find useful and keeping them consistent even if the internal details later change. 
 * An API may be custom-built for a particular pair of systems, or it may be a shared standard allowing interoperability among many systems.
 
+# Remote API
+
+Remote APIs allow developers to manipulate remote resources through protocols, specific standards for communication that allow different technologies to work together, regardless of language or platform. For example, the Java Database Connectivity API allows developers to query many different types of databases with the same set of functions, while the Java remote method invocation API uses the Java Remote Method Protocol to allow invocation of functions that operate remotely, but appear local to the developer.
+
 # REST Framework 
 
 * It describes an architecture which stands for REpresentational State Transfer
