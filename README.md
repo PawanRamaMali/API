@@ -12,6 +12,8 @@ API is Application Programming Interface
 * One purpose of APIs is to hide the internal details of how a system works, exposing only those parts a programmer will find useful and keeping them consistent even if the internal details later change. 
 * An API may be custom-built for a particular pair of systems, or it may be a shared standard allowing interoperability among many systems.
 
+APIs are a simplified way to connect your own infrastructure through cloud-native app development, but they also allow you to share your data with customers and other external users. Public APIs represent unique business value because they can simplify and expand how you connect with your partners, as well as potentially monetize your data (the Google Maps API is a popular example).
+
 ![image](https://user-images.githubusercontent.com/11299574/128553402-edb17898-d99e-4b1c-b162-fc838609420a.png)
 
 
