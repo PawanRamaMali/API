@@ -86,6 +86,8 @@ As the use of web APIs has increased, certain protocols have been developed to p
 
 Common used HTTP methods : 
 
+![image](https://user-images.githubusercontent.com/11299574/128555671-a950dcdd-5ae0-4fe5-bdbb-bdc6b9556db8.png)
+
 * GET  - To retreive a resource
 * PUT - To modify resource
 * POST - To send resource
