@@ -129,7 +129,13 @@ When using APIs, there are two common architectural approaches—service-oriente
 
 While SOA was a vital evolutionary step in application development, microservices architecture is built to scale, providing developers and enterprises with the agility and flexiblity they need to create, modify, test, and deploy applications at a granular level, with shorter iteration cycles and more efficient use of cloud computing resources.
 
+# API Architectures 
+
+
+![image](https://user-images.githubusercontent.com/11299574/128555495-fa8fa995-443e-44e2-95e4-a5082d77b27c.png)
 
 ![Uploading image.png…]()
+
+
 
 
