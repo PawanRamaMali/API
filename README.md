@@ -6,10 +6,14 @@ API is Application Programming Interface
 * It helps in connecting various software components.
 * An API makes it easier for developers to use certain technologies in building applications by using predefined operations. 
 
+
 # Purpose of API
 
 * One purpose of APIs is to hide the internal details of how a system works, exposing only those parts a programmer will find useful and keeping them consistent even if the internal details later change. 
 * An API may be custom-built for a particular pair of systems, or it may be a shared standard allowing interoperability among many systems.
+
+![image](https://user-images.githubusercontent.com/11299574/128553402-edb17898-d99e-4b1c-b162-fc838609420a.png)
+
 
 # Remote API
 
