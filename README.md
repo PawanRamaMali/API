@@ -120,6 +120,8 @@ INSTALLED_APPs = (
 
 # APIs, web services, and microservices
 
+![image](https://user-images.githubusercontent.com/11299574/128555842-01088cff-6503-4516-8e7b-9ce21446696d.png)
+
 A web service is a software component that can be accessed via a web address. Therefore, by definition, web services require a network. As a web service exposes an application’s data and functionality, in effect, every web service is an API. However, not every API is a web service.
 
 Traditionally, API referred to an interface connected to an application that may have been created with any of the low-level programming languages, such as Javascript. The modern API adheres to REST principles and the JSON format and is typically built for HTTP, resulting in developer-friendly interfaces that are easily accessible and widely understood by applications written in Java, Ruby, Python, and many other languages. 
