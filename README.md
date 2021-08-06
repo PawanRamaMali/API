@@ -111,3 +111,16 @@ INSTALLED_APPs = (
 'rest_framework',
 )
 ```
+
+
+# APIs, web services, and microservices
+
+A web service is a software component that can be accessed via a web address. Therefore, by definition, web services require a network. As a web service exposes an application’s data and functionality, in effect, every web service is an API. However, not every API is a web service.
+
+Traditionally, API referred to an interface connected to an application that may have been created with any of the low-level programming languages, such as Javascript. The modern API adheres to REST principles and the JSON format and is typically built for HTTP, resulting in developer-friendly interfaces that are easily accessible and widely understood by applications written in Java, Ruby, Python, and many other languages. 
+
+When using APIs, there are two common architectural approaches—service-oriented architecture (SOA) and microservices architecture.
+
+SOA is a software design style where the features are split up and made available as separate services within a network. Typically, SOA is implemented with web services, making the functional building blocks accessible through standard communication protocols. Developers can build these services from scratch, but they usually create them by exposing functions from legacy systems as service interfaces.
+Microservices architecture is an alternative architectural style that divides an application into smaller, independent components. Applying the application as a collection of separate services makes it easier to test, maintain, and scale. This methodology has risen to prominence throughout the cloud computing age, enabling developers to work on one component independent of the others.
+While SOA was a vital evolutionary step in application development, microservices architecture is built to scale, providing developers and enterprises with the agility and flexiblity they need to create, modify, test, and deploy applications at a granular level, with shorter iteration cycles and more efficient use of cloud computing resources.
