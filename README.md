@@ -2,6 +2,9 @@
 
 API is Application Programming Interface
 
+![image](https://user-images.githubusercontent.com/11299574/128555047-06e1a810-5dc0-41dd-acf6-1d0047ebda82.png)
+
+
 * It is set of subroutine definitions, protocols and tools for building application software. 
 * It helps in connecting various software components.
 * An API makes it easier for developers to use certain technologies in building applications by using predefined operations. 
