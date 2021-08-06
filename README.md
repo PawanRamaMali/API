@@ -138,7 +138,7 @@ While SOA was a vital evolutionary step in application development, microservice
 
 ![image](https://user-images.githubusercontent.com/11299574/128555709-315b847c-6a25-458c-976a-af6598f22bbb.png)
 
-![Uploading image.png…]()
+
 
 
 
