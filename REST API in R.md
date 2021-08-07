@@ -146,6 +146,54 @@ Image 8 – Life expectancy in Poland over time
 And that’s how you can return an image in the API response. You’ve only created endpoints with the GET method so far. You’ll learn how to work with POST next.
 
 
+## Endpoint 3 – /calculate_gdp
+
+You’ll now learn how to work with POST methods (or any other sends data in the request body). 
+The goal is to create another endpoint that calculates the total GDP for a specified country in the latest year (2007).
+
+The only parameter you’ll need is the country.
+
+Once you have this value, you can use dplyr and the summarize() function to calculate the total GDP. Here’s the entire code snippet:
+
+```
+#* Returns most recent GDP for a country
+#* @param in_country
+#* @post /calculate_gdp
+function(in_country) {
+  gapminder %>%
+    filter(
+      year == 2007,
+      country == in_country
+    ) %>%
+    summarize(gdp = pop * gdpPercap)
+}
+```
+If you were to run the API now, you would instantly see a new box, which is green this time, indicating the POST method:
+
+![image](https://user-images.githubusercontent.com/11299574/128609837-4cc622b5-527f-474f-b390-49e2cebe9f93.png)
+Image 9 – /calculate_gdp endpoint
+
+You can once again click on the “Try it out” button to test the functionality:
+
+![image](https://user-images.githubusercontent.com/11299574/128609844-2e79869a-ac35-4e71-bc5f-be93e9465451.png)
+Image 10 – Testing out the /calculate_gdp endpoint
+
+Let’s see what was the total GDP of Poland in 2007:
+
+![image](https://user-images.githubusercontent.com/11299574/128609851-7214fa01-789f-446e-b5dd-5ddba9e3f2dc.png)
+Image 11 – Testing out the /calculate_gdp endpoint for Poland
+
+Once you click on the “Execute” button, you’ll be presented with the following response:
+
+![image](https://user-images.githubusercontent.com/11299574/128609861-915d62d4-ee2f-4664-a5de-b731d38148f3.png)
+Image 12 – Total GDP in Poland in 2007
+
+The only difference here between GET and POST is that you can’t put parameters and their values in the URL for the POST. 
+The parameters and values are passed in the request body as JSON.
+
+You now know how to wrap your R code into a simple REST API. Let’s wrap things up next.
+
+
 
 ```
 ```
