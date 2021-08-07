@@ -89,6 +89,62 @@ Image 4 – /countries endpoint example response
 
 And that’s your first endpoint! It takes data in and returns data out. But what if you want to return something else? Like an image, for example. You’ll learn how to do that next.
 
+## Endpoint 2 – /plot
+
+This endpoint will be quite different. The goal now is to return an image instead of raw data. The image will contain a line plot made with ggplot2, showing life expectancy over time.
+
+Two parameters are required – country and chart title – both are self-explanatory.
+
+If you want to return an image from an API with R, you’ll have to put the following comment: #* @serializer contentType list(type='image/png'). Everything else is more or less the same.
+
+Regarding the visualization, a subset is made from the original dataset containing only records for the specified country. A simple line and marker plot is then made from the dataset.
+
+The problem is – you can’t return a ggplot2 visualization. You’ll have to save the image with the ggsave() function and then return it with the readBin() function.
+
+Here’s the entire snippet:
+
+```
+#* Returns a line plot of life expectancy for country
+#* @param in_country
+#* @param in_title Chart title
+#* @get /plot
+#* @serializer contentType list(type='image/png')
+function(in_country, in_title) {
+  subset <- gapminder %>%
+    filter(country == in_country)
+  plot <- ggplot(subset, aes(x = year, y = lifeExp)) +
+    geom_line(color = "#0099f9", size = 2) +
+    geom_point(color = "#0099f9", size = 5) +
+    ggtitle(in_title) +
+    theme_classic() +
+    theme(aspect.ratio = 9 / 16)
+  file <- "plot.png"
+  ggsave(file, plot)
+  readBin(file, "raw", n = file.info(file)$size)
+}
+```
+If you were to run the API now, a new endpoint would immediately catch your attention:
+
+![image](https://user-images.githubusercontent.com/11299574/128609762-c76c0d8c-b44a-4082-809f-ddc90711b83f.png)
+Image 5 – /plot endpoint
+
+Here’s how its documentation looks like:
+
+![image](https://user-images.githubusercontent.com/11299574/128609770-2f36ee5a-8374-4b6d-86bc-cbc18d5e80c1.png)
+Image 6 – /plot endpoint documentation
+
+You can once again click on the “Try it out” button to test the functionality. Let’s see how life expectancy changed over time in Poland:
+
+![image](https://user-images.githubusercontent.com/11299574/128609785-f14de447-9f8a-4972-968c-b0baae86d8cb.png)
+Image 7 – Testing out the /plot endpoint for life expectancy in Poland
+
+Once you click on the “Execute” button, you’ll be presented with the following visualization:
+
+![image](https://user-images.githubusercontent.com/11299574/128609797-ce8f745c-f344-4084-b6d1-28642e0bb4c8.png)
+Image 8 – Life expectancy in Poland over time
+
+And that’s how you can return an image in the API response. You’ve only created endpoints with the GET method so far. You’ll learn how to work with POST next.
+
 
 
 ```
